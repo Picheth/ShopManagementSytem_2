@@ -1,0 +1,5 @@
+{
+  "name": "Shop Management System",
+  "description": "A comprehensive web application for phone shops to manage financial reports, inventory, sales, and other business operations. It provides a centralized dashboard for a clear overview of the business.",
+  "requestFramePermissions": []
+}
