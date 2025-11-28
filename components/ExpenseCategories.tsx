@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { MOCK_EXPENSE_CATEGORIES_DATA as MOCK_EXPENSE_CATEGORIES } from '../data/mockData';
-import type { ExpenseCategoryGroup } from '../data/mockData';
+import { MOCK_EXPENSE_CATEGORIES_DATA as MOCK_EXPENSE_CATEGORIES } from '../src/data/mockData';
+import type { ExpenseCategoryGroup } from '../src/data/mockData';
 import Modal from './Modal';
 import ExpenseCategoryForm from './ExpenseCategoryForm';
 

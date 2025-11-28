@@ -1,5 +1,5 @@
 import React from 'react';
-import { MOCK_INVENTORY_DATA } from '../data/mockData';
+import { MOCK_INVENTORY_DATA } from '../src/data/mockData';
 
 const LOW_STOCK_THRESHOLD = 20;
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from './Modal';
 import SettlementForm from './SettlementForm';
 import DataTable from './DataTable';
-import { MOCK_SETTLEMENTS_DATA } from '../data/mockData';
+import { MOCK_SETTLEMENTS_DATA } from '../src/data/mockData';
 import type { Settlement, ColumnDefinition } from '../types';
 
 const columns: ColumnDefinition<Settlement>[] = [

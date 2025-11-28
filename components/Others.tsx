@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 import TaxRateForm from './TaxRateForm';
-import { MOCK_TAX_RATES_DATA } from '../data/mockData';
+import { MOCK_TAX_RATES_DATA } from '../src/data/mockData';
 import type { TaxRate } from '../types';
 
 const Others: React.FC = () => {

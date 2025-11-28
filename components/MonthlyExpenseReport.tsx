@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import Card from './Card';
-import { MOCK_EXPENSES_DATA } from '../data/mockData';
+import { MOCK_EXPENSES_DATA } from '../src/data/mockData';
 import type { Expense } from '../types';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 

@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import type { User } from '../types';
-import { MOCK_BRANCHES_DATA } from '../data/mockData';
+import { MOCK_BRANCHES_DATA } from '../src/data/mockData';
 
 interface UserFormProps {
   onClose: () => void;

@@ -1,5 +1,5 @@
 
-import type { InventoryItem, Product, Purchase, Branch, StockTransfer, Expense, Settlement, Supplier, CashFlowActivity, Contact, TaxRate, Sale, Payment, SerializedItem, Account, User, RepairJob, PurchaseOrder, VariationAttribute, MonthlyTaxPayment, Installment, InstallmentPlan, ProductMaster, ProductVariation } from '../types';
+import type { InventoryItem, Product, Purchase, Branch, StockTransfer, Expense, Settlement, Supplier, CashFlowActivity, Contact, TaxRate, Sale, Payment, SerializedItem, Account, User, RepairJob, PurchaseOrder, VariationAttribute, MonthlyTaxPayment, Installment, InstallmentPlan, ProductMaster, ProductVariation } from '../../types';
 import React from 'react';
 
 // From data/variationsData.ts

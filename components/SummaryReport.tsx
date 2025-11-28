@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { ResponsiveContainer, PieChart, Pie, Cell, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, Line, ComposedChart } from 'recharts';
 import Card from './Card';
-import { MOCK_ACCOUNTS_DATA } from '../data/mockData';
+import { MOCK_ACCOUNTS_DATA } from '../src/data/mockData';
 import type { Account } from '../types';
 
 const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#6366F1'];

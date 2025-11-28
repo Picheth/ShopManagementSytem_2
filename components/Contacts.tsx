@@ -3,7 +3,7 @@ import DataTable from './DataTable';
 import Card from './Card';
 import Modal from './Modal';
 import ContactForm from './ContactForm';
-import { MOCK_CONTACTS_DATA } from '../data/mockData';
+import { MOCK_CONTACTS_DATA } from '../src/data/mockData';
 import type { Contact, ColumnDefinition } from '../types';
 
 const Contacts: React.FC = () => {

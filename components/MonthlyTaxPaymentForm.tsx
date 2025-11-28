@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import type { TaxPayment } from "../data/monthlyTaxPaymentsData";
+import type { TaxPayment } from "../src/data/monthlyTaxPaymentsData";
 
 interface MonthlyTaxPaymentFormProps {
   onSubmit: (data: TaxPayment) => void;

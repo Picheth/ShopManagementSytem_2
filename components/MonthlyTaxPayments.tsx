@@ -1,6 +1,6 @@
 // src/components/MonthlyTaxPayments.tsx
 import React from "react";
-import { monthlyTaxReport } from "../data/monthlyTaxPaymentsData";
+import { monthlyTaxReport } from "../src/data/monthlyTaxPaymentsData";
 
 const formatRiel = (value: number) =>
   value > 0 ? `R ${value.toLocaleString("en-US")}` : "R -";

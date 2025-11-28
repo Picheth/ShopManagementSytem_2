@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { MOCK_BRANCHES_DATA } from '../data/mockData';
-import { MOCK_PRODUCTS_DATA } from '../data/mockData';
+import { MOCK_BRANCHES_DATA } from '../src/data/mockData';
+import { MOCK_PRODUCTS_DATA } from '../src/data/mockData';
 import type { StockTransfer } from '../types';
 
 interface StockTransferFormProps {

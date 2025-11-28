@@ -3,8 +3,8 @@ import DataTable from './DataTable';
 import Card from './Card';
 import Modal from './Modal';
 import UserForm from './UserForm';
-import { MOCK_STAFF_DATA } from '../data/mockData';
-import { MOCK_BRANCHES_DATA } from '../data/mockData';
+import { MOCK_STAFF_DATA } from '../src/data/mockData';
+import { MOCK_BRANCHES_DATA } from '../src/data/mockData';
 import type { User, ColumnDefinition } from '../types';
 
 const Staff: React.FC = () => {

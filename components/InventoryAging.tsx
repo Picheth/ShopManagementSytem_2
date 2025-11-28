@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
 import Card from './Card';
 import DataTable from './DataTable';
-import { MOCK_INVENTORY_DATA } from '../data/mockData';
+import { MOCK_INVENTORY_DATA } from '../src/data/mockData';
 import type { InventoryItem, ColumnDefinition } from '../types';
 
 // Define an extended type for our internal use

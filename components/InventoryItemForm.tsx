@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { InventoryItem } from '../types';
-import { MOCK_BRANCHES_DATA } from '../data/mockData';
+import { MOCK_BRANCHES_DATA } from '../src/data/mockData';
 
 interface InventoryItemFormProps {
   onClose: () => void;

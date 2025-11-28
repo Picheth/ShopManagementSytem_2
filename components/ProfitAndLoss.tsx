@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts';
 import Card from './Card';
-import { MOCK_ACCOUNTS_DATA } from '../data/mockData';
+import { MOCK_ACCOUNTS_DATA } from '../src/data/mockData';
 import type { Account } from '../types';
 
 const ProfitAndLoss: React.FC = () => {

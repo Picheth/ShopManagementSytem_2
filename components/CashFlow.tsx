@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import Card from './Card';
-import { MOCK_CASH_FLOW_DATA } from '../data/mockData';
+import { MOCK_CASH_FLOW_DATA } from '../src/data/mockData';
 import type { CashFlowActivity } from '../types';
 
 const cashFlowChartData = [

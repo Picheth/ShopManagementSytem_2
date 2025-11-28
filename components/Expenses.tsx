@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import Modal from './Modal';
 import ExpenseForm from './ExpenseForm';
 import Card from './Card';
-import { MOCK_EXPENSES_DATA } from '../data/mockData';
+import { MOCK_EXPENSES_DATA } from '../src/data/mockData';
 import type { Expense } from '../types';
 
 const Expenses: React.FC = () => {

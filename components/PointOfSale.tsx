@@ -1,6 +1,6 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { MOCK_PRODUCTS_DATA, MOCK_TAX_RATES_DATA, MOCK_SALES_DATA, MOCK_INSTALLMENT_PLANS_DATA, MOCK_INSTALLMENTS_DATA } from '../data/mockData';
+import { MOCK_PRODUCTS_DATA, MOCK_TAX_RATES_DATA, MOCK_SALES_DATA, MOCK_INSTALLMENT_PLANS_DATA, MOCK_INSTALLMENTS_DATA } from '../src/data/mockData';
 import type { Product, SaleLineItem, Sale, InstallmentPlan, Installment } from '../types';
 import PaymentModal from './PaymentModal';
 

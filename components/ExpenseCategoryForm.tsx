@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { ExpenseCategoryGroup } from '../data/mockData';
+import type { ExpenseCategoryGroup } from '../src/data/mockData';
 
 interface ExpenseCategoryFormProps {
   onClose: () => void;

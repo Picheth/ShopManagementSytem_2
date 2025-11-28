@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import DataTable from './DataTable';
 import Card from './Card';
-import { MOCK_INVENTORY_DATA } from '../data/mockData';
+import { MOCK_INVENTORY_DATA } from '../src/data/mockData';
 import type { InventoryItem, ColumnDefinition } from '../types';
 
 const LOW_STOCK_THRESHOLD = 20;

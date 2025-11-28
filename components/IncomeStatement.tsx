@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { MOCK_ACCOUNTS_DATA } from '../data/mockData';
+import { MOCK_ACCOUNTS_DATA } from '../src/data/mockData';
 import type { Account } from '../types';
 
 const IncomeStatement: React.FC = () => {

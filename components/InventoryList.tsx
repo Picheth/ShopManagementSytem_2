@@ -5,7 +5,7 @@ import Modal from './Modal';
 import StockAdjustmentForm from './StockAdjustmentForm';
 import InventoryItemForm from './InventoryItemForm';
 import LowStockAlerts from './LowStockAlerts';
-import { MOCK_INVENTORY_DATA, MOCK_BRANCHES_DATA } from '../data/mockData';
+import { MOCK_INVENTORY_DATA, MOCK_BRANCHES_DATA } from '../src/data/mockData';
 import type { InventoryItem, ColumnDefinition } from '../types';
 
 const LOW_STOCK_THRESHOLD = 20;

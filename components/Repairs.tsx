@@ -3,8 +3,8 @@ import DataTable from './DataTable';
 import Card from './Card';
 import Modal from './Modal';
 import RepairForm from './RepairForm';
-import { MOCK_REPAIRS_DATA } from '../data/mockData';
-import { MOCK_STAFF_DATA } from '../data/mockData';
+import { MOCK_REPAIRS_DATA } from '../src/data/mockData';
+import { MOCK_STAFF_DATA } from '../src/data/mockData';
 import type { RepairJob, User, ColumnDefinition, RepairStatus } from '../types';
 
 const Repairs: React.FC = () => {

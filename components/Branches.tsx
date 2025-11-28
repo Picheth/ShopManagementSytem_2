@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MOCK_BRANCHES_DATA } from '../data/mockData';
+import { MOCK_BRANCHES_DATA } from '../src/data/mockData';
 import Modal from './Modal';
 import BranchForm from './BranchForm';
 import type { Branch } from '../types';

@@ -3,7 +3,7 @@ import { getDocs } from './database';
 import DataTable from './DataTable';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import type { Sale, Product, ColumnDefinition } from '../types';
-import { MOCK_PRODUCTS_DATA } from '../data/mockData';
+import { MOCK_PRODUCTS_DATA } from '../src/data/mockData';
 
 interface CustomerSaleSummary {
     id: string; // customer name

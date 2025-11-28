@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { MOCK_PRODUCTS_DATA, MOCK_TAX_RATES_DATA } from '../data/mockData';
+import { MOCK_PRODUCTS_DATA, MOCK_TAX_RATES_DATA } from '../src/data/mockData';
 import type { Product, SaleLineItem, Sale, TaxRate, SerializedItem } from '../types';
 import Modal from './Modal';
 import SerialSelectorModal from './SerialSelectorModal';

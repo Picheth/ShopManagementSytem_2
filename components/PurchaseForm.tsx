@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { MOCK_PRODUCTS_DATA, MOCK_SUPPLIERS_DATA } from '../data/mockData';
+import { MOCK_PRODUCTS_DATA, MOCK_SUPPLIERS_DATA } from '../src/data/mockData';
 import type { Purchase, Product, PurchaseLineItem } from '../types';
 import Modal from './Modal';
 

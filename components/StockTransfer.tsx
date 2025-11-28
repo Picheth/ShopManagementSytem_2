@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DataTable from './DataTable';
 import Modal from './Modal';
 import StockTransferForm from './StockTransferForm';
-import { MOCK_STOCK_TRANSFERS_DATA } from '../data/mockData';
+import { MOCK_STOCK_TRANSFERS_DATA } from '../src/data/mockData';
 import type { StockTransfer, ColumnDefinition } from '../types';
 
 const columns: ColumnDefinition<StockTransfer>[] = [

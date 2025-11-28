@@ -3,7 +3,7 @@ import { getDocs } from './database';
 import { ResponsiveContainer, ComposedChart, Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Cell } from 'recharts';
 import Card from './Card';
 import type { Sale, Product } from '../types';
-import { MOCK_PRODUCTS_DATA } from '../data/mockData';
+import { MOCK_PRODUCTS_DATA } from '../src/data/mockData';
 
 const COLORS = {
     Paid: '#10B981',

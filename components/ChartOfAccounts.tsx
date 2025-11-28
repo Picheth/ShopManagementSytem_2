@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Modal from './Modal';
 import AccountForm from './AccountForm';
-import { MOCK_ACCOUNTS_DATA } from '../data/mockData';
+import { MOCK_ACCOUNTS_DATA } from '../src/data/mockData';
 import type { Account } from '../types';
 
 const ChartOfAccounts: React.FC = () => {
