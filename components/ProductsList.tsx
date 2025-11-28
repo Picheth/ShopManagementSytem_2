@@ -7,6 +7,118 @@ import type { Product, ColumnDefinition } from '../types';
 import ProductForm from './ProductForm';
 import ProductDetail from './ProductDetail';
 import type { DocumentSnapshot, DocumentData } from './firebase';
+import papa from 'papaparse';
+import { saveAs } from 'file-saver';
+import * as XLSX from 'xlsx';
+import { exportCSV, exportExcel} from '../src/utils/csvExcel';
+import { parseCSVFile } from "../src/utils/csvParser";
+import { parseExcelFile } from '../src/utils/excelParser';
+
+type ProductsListProps = {
+    products: Product[];
+    onImport: (imported: Product[]) => void;
+};
+
+export function ProductsImportExport({ products, onImport }: ProductsListProps) {
+  const handleExportCSV = () => {
+    exportCSV("products.csv", products, [
+      "sku", "name", "brand", "category", "price", "cost", "stock", "description"
+    ]);
+  };
+
+  const handleExportExcel = () => {
+    exportExcel("products.xlsx", products, [
+      "sku", "name", "brand", "category", "price", "cost", "stock", "description"
+    ]);
+  };
+
+  const handleImport = async (file: File) => {
+    let imported: Product[] = [];
+    if (file.name.endsWith(".csv")) {
+      const rows = await parseCSVFile(file);
+      // Map rows to Product objects as needed
+      imported = rows.map(row => ({
+        sku: row.sku,
+        name: row.name,
+        brand: row.brand,
+        category: row.category,
+        price: Number(row.price),
+        cost: Number(row.cost),
+        stock: Number(row.stock),
+        description: row.description,
+        model: row.model || '',
+        productNo: row.productNo || '',
+        variations: row.variations || [],
+        id: row.id || '',
+        shortModel: row.shortModel || '',
+        // Required Product fields with sensible defaults
+        productId: row.productId || '',
+        attributes: row.attributes || {},
+        costPrice: typeof row.costPrice !== 'undefined' ? Number(row.costPrice) : Number(row.cost) || 0,
+      }));
+    } else {
+      imported = await parseExcelFile(file);
+    }
+    onImport(imported);
+  };
+
+  return (
+    <div>
+      <button onClick={handleExportCSV}>Export CSV</button>
+      <button onClick={handleExportExcel}>Export Excel</button>
+      <input
+        type="file"
+        accept=".csv,.xlsx,.xls"
+        onChange={e => e.target.files && handleImport(e.target.files[0])}
+      />
+      {/* ...existing product list rendering... */}
+    </div>
+  );
+}
+
+export const exportToCSV = (products: Product[]) => {
+    const csvData = papa.unparse(products);
+    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    saveAs(blob, 'products_export.csv');
+}
+
+export const importFromCSV = (file: File): Promise<Product[]> => {
+    return new Promise((resolve, reject) => {
+        papa.parse(file, {
+            header: true,
+            complete: (results) => {
+                resolve(results.data as Product[]);
+            }
+        });
+    });
+}
+
+export const importFromExcel = (file: File): Promise<Product[]> => {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const data = new Uint8Array(e.target?.result as ArrayBuffer);
+            const workbook = XLSX.read(data, { type: 'array' });
+            const firstSheetName = workbook.SheetNames[0];
+            const worksheet = workbook.Sheets[firstSheetName];
+            const jsonData: Product[] = XLSX.utils.sheet_to_json(worksheet);
+            resolve(jsonData);
+        };
+        reader.onerror = (err) => {
+            reject(err);
+        };
+        reader.readAsArrayBuffer(file);
+    });
+}
+
+export const exportToExcel = (products: Product[]) => {
+    const worksheet = XLSX.utils.json_to_sheet(products);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Products');
+    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
+    saveAs(blob, 'products_export.xlsx');
+}
 
 const PAGE_SIZE = 25;
 

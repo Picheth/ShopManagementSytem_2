@@ -42,6 +42,13 @@ export interface Payment {
   notes?: string;
 }
 
+// Product type definition
+export type SimpleProduct = {
+  id: string;
+  name: string;
+  price: number;
+  stock: number;
+};
 export interface Installment {
   id: string; // INST-00001
   planId: string;
@@ -140,10 +147,35 @@ export interface InventoryItem {
     variationId?: string; // Link to ProductVariation
 }
 
-export type ProductCondition = 'NEW' | 'USED' | 'Activated' | 'Parts Replace' | 'Others' | 'AUSED';
+export interface Products {
+    id: string;
+    productNo: string;
+    sku: string;
+    name: string;
+    brand?: string;
+    category?: string;
+    subCategory?: string;
+    price: number;
+    cost?: number;
+    stock?: number;
+    description?: string;
+    shortModel?: string;
+    variations?: {
+        ram?: string;
+        storage: string;
+        color: string;
+        generation?: string;
+        modelCode?: string;
+        yearReleased?: string;
+        country: string;
+        condition: ProductCondition;
+        others?: string;
+    };
+  }
+
+  export type ProductCondition = 'NEW' | 'USED' | 'Activated' | 'Parts Replace' | 'Others' | 'AUSED';
 
 // --- New Product Hierarchy Structure ---
-
 export interface ProductMaster {
     id: string; // e.g., PM-001
     name: string; // e.g., iPhone 15 Pro
